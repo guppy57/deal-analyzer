@@ -11,19 +11,20 @@ datasource db {
 }
 
 model Loan {
-  id                     String   @id @default(cuid())
-  name                   String
-  provider               String
-  downPaymentPercent     Int
-  yearsLength            Int      @default(30)
-  interestRate           Int
-  hasMIP                 Boolean
-  mipAnnualRate          Int
-  mipUpfrontRate         Int
-  downPaymentGrantAmount Int
-  deals                  Deal[]
-  createdAt              DateTime @default(now())
-  updateAt               DateTime @updatedAt
+  id                         String   @id @default(cuid())
+  name                       String
+  provider                   String
+  downPaymentPercent         Int
+  yearsLength                Int      @default(30)
+  interestRate               Int
+  hasMIP                     Boolean
+  mipAnnualRate              Int
+  mipUpfrontRate             Int
+  downPaymentGrantAmount     Int
+  closingCostsDiscountAmount Int
+  deals                      Deal[]
+  createdAt                  DateTime @default(now())
+  updateAt                   DateTime @updatedAt
 }
 
 model Property {
